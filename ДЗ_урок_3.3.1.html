@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Загадки</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" >
+<script type="text/javascript">
+/*
+function checkAnswers(){
+	var userAnswer = document.getElementById('answer1').value;
+	alert(userAnswer);
+}
+*/
+
+	function checkAnswers(tagName, answer){
+
+		var userAnswer = document.getElementById(tagName).value;
+		if(userAnswer.toLowerCase() == answer){
+			return true;
+		}
+		else {
+			return false;
+		}
+
+	}
+
+	function checkAnswersButton(){
+
+		var CorrectAnswersCount=0;
+		if(checkAnswers('answer1','40')){
+			CorrectAnswersCount++
+		}
+		if(checkAnswers('answer2','10')){
+			CorrectAnswersCount++
+		}
+		if(checkAnswers('answer3','10')){
+			CorrectAnswersCount++
+		}
+		if(checkAnswers('answer4',"2")){
+			CorrectAnswersCount++
+		}
+		if(CorrectAnswersCount == 0){
+			alert('Вы ничего не угадали');
+		}
+		else {
+			alert('Количество правильных ответов: ' + CorrectAnswersCount);
+		}
+	}
+
+</script>
+</head>
+
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="сайт.html">Главная</a></li>
+			<li><a href="ДЗ_урок_3.3.1.html">Загадки</a></li>
+			<li><a href="ДЗ_урок_3.3.2.html">Угадайка</a></li>
+			<li><a href="ДЗ_урок_3.3.3.html">Угадайка-мультиплеер</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="content_box">
+	
+	<div id="content_title">
+		<h2>Игра Загадки</h2>
+	</div>
+
+	<div id="content">
+		<table width="100%" cellspacing="10">	
+			<tr valign="middle">
+				<td>
+					<p>Сколько ножек у сороконожки?</p>
+					<input type="text" id="answer1"></input>
+				</td>
+			
+				<td>
+					<p>сколько пальцев на руках у человека?</p>
+					<input type="text" id="answer2"></input>
+				</td>
+			</tr>
+
+			<tr valign="middle">
+				<td>
+					<p>сколько пальцев у человека на ногах?</p>
+					<input type="text" id="answer3"></input>
+				</td>
+
+				<td>
+					<p>Сколько глаз у черепахи?</p>
+					<input type="text" id="answer4"></input>
+				</td>
+
+			</tr>
+
+			<tr>
+				<td align="center" colspan="2">
+					<input type="button" value="Ответить" onclick="checkAnswersButton()" />
+				</td>
+			</tr>
+		</table>
+
+
+	</div>
+	<div id="tooplate_footer">
+		Copyright © 2016 <a href="http://geekbrains.ru">GeekBrains</a>
+	</div>
+
+
+</div>
+
+</body>
+</html>

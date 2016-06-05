@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" >
+
+	<script type="text/javascript">
+
+		function randomInteger(min, max){
+			var rand = min - 0.5 + Math.random() * (max + 1 - min);
+			rand = Math.round(rand);
+			return rand;
+		}
+		
+		randomAnswer = randomInteger(1,100);
+
+		function StartPlay(){
+					
+			
+		while(true)
+		{
+			var user1Answer = prompt('Введите число от 1 до 100');
+				if(user1Answer == randomAnswer)	{
+					alert('Вы угадали');
+					break;
+				} 
+				if (user1Answer < 1 || user1Answer > 100) {
+					do {
+						user1Answer = prompt('Некоректный ввод, введите число от 1 до 100');
+					}
+					while(user1Answer < 1 || user1Answer > 100)
+				}
+				if (user1Answer < randomAnswer) {
+					alert('Ваше число меньше загаданного');
+				} 
+				if (user1Answer > randomAnswer) {
+					alert('Ваше число больше загаданного');
+				}
+
+			}
+			alert('Игра закончена');
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="сайт.html">Главная</a></li>
+			<li><a href="ДЗ_урок_3.3.1.html">Загадки</a></li>
+			<li><a href="ДЗ_урок_3.3.2.html">Угадайка</a></li>
+			<li><a href="ДЗ_урок_3.3.3.html">Угадайка-мультиплеер</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="content_box">
+
+	<div id="content_title">
+	<h2>Игра угадайка</h2>
+	</div>
+
+	<div id="content">
+		<p>Компьютер загадал число от 1 до 100, Вам предлагается отгадать это число. После каждого введенного числа компьтер дает подсказку больше ли ваше число загаданого или меньше.</p>
+
+		<input type="button" value="Начать игру" onclick="StartPlay()" />
+	</div>
+
+
+
+	<div id="tooplate_footer">
+		Copyright © 2016 <a href="http://geekbrains.ru">GeekBrains</a>
+	</div>
+
+
+</div>
+
+</body>
+</html>
